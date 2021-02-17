@@ -1,0 +1,20 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test-remote:
+    runs-on: self-hosted
+    steps:
+      - name: Run playbook
+        uses: andreabiondo/action-ansible-playbook@v2
+        with:
+          playbook: ansible-playbook.yml
+st
+>>>>>>> 737dc1507017379320099012110f2ea005d4abd3
+          options: |
+            --verbose

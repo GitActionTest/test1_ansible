@@ -1,0 +1,22 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test-remote:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install ansible 
+        run: sudo apt install ansible
+      - name: Run playbook
+        uses: andreabiondo/action-ansible-playbook@v2
+        with:
+          playbook: ansible-playbook.yml
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          directory: test
