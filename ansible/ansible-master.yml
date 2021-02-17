@@ -8,3 +8,11 @@
       apt:
         name: nginx
         state: present
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+    - name: Update index page
+      copy:
+        src: ../src/index.html
+        dest: /var/www/html/index.html
