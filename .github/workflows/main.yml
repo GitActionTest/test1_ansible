@@ -21,4 +21,4 @@ jobs:
         with:
           playbook: ansible-playbook.yml
           key: ${{secrets.SSH_PRIVATE_KEY}}
-          directory: test
+          directory: ansible
