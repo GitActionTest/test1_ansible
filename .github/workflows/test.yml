@@ -1,4 +1,4 @@
-name: Master deployment
+name: Test deployment
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - test
 
 jobs:
-  Deploy-on-Master:
+  Deploy-on-Test:
     runs-on: self-hosted
     steps:
       - name: Checkout code
