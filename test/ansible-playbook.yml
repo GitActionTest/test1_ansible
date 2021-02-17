@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  hosts: localhost
+  hosts: node2
   become: yes
 
   tasks:
