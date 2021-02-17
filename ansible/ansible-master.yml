@@ -1,10 +1,10 @@
 ---
 - name: Install nginx
-  hosts: node1
+  hosts: servers
   become: yes
 
   tasks:
     - name: Install nginx
       apt:
-        name: nginx
+        name: yarn
         state: present
