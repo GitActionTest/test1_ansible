@@ -1,13 +1,12 @@
-name: Test Action
+name: Production deployment
 
 on:
   push:
     branches:
       - master
-  pull_request:
 
 jobs:
-  test-remote:
+  Deploy-on-Master:
     runs-on: self-hosted
     steps:
       - name: Checkout code
