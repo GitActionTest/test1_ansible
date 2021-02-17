@@ -23,5 +23,4 @@ jobs:
           directory: ansible
           inventory: |
             [servers]
-            node1 ansible_ssh_host=172.16.226.158
-            node2 ansible_ssh_host=172.16.226.132
+            asdfa ansible_ssh_host=172.16.226.158
