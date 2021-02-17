@@ -19,6 +19,10 @@ jobs:
       - name: Run playbook
         uses: andreabiondo/action-ansible-playbook@v2
         with:
-          playbook: ansible-playbook.yml
+          playbook: ansible-master.yml
           key: ${{secrets.SSH_PRIVATE_KEY}}
           directory: ansible
+          inventory:
+            [servers]
+            node1 ansible_ssh_host=172.16.226.158
+            node2 ansible_ssh_host=172.16.226.132
