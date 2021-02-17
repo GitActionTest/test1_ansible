@@ -13,8 +13,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Install ansible 
         run: sudo apt install -y ansible
-      - name: Update hosts
-        run: sudo cp hosts /etc/ansible/
       - name: Run playbook
         uses: andreabiondo/action-ansible-playbook@v2
         with:
