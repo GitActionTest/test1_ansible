@@ -1,0 +1,22 @@
+name: Master deployment
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  Deploy-on-Master:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run playbook
+        uses: andreabiondo/action-ansible-playbook@v2
+        with:
+          playbook: ansible-master.yml
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          directory: ansible
+          inventory: |
+            [servers]
+            test ansible_ssh_host=172.16.226.132

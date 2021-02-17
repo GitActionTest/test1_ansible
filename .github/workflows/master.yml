@@ -1,4 +1,4 @@
-name: Production deployment
+name: Master deployment
 
 on:
   push:
@@ -23,4 +23,4 @@ jobs:
           directory: ansible
           inventory: |
             [servers]
-            asdfa ansible_ssh_host=172.16.226.158
+            production ansible_ssh_host=172.16.226.158
